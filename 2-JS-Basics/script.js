@@ -43,6 +43,7 @@ alert('The lastName is ' + lastName);
 */
 
 // Lecture: operators
+/*
 var now = 2016;
 var birthYear = now - 26;
 console.log(birthYear);
@@ -63,3 +64,38 @@ console.log(ageJohn);
 ageMark *= 2;
 // ageMark = ageMark * 2;
 console.log('ageMark*=2 is ' + ageMark);
+*/
+
+// Lecture: if/else statements
+
+var name = 'Len Chang';
+var age = 26;
+var isMarried = 'no';
+
+if(isMarried === 'yes') {
+    console.log(name + ' is married');
+} else {
+    console.log(name + 'will hopefully marry soon :)');
+}
+
+isMarried = true;
+/*
+if(isMarried){
+    console.log('YES!');
+}else{
+    console.log('NO!');
+}
+*/
+
+if(isMarried){
+    console.log('YES!');
+}
+
+// type Coercion 
+if (23 == "23"){
+    console.log('Something to print...')
+}
+
+if (23 === "23"){
+    console.log('Something to print...')
+}
