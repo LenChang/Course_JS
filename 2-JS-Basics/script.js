@@ -92,10 +92,10 @@ if(isMarried){
 }
 
 // type Coercion 
-if (23 == "23"){
+if (23 == '23'){
     console.log('Something to print...')
 }
 
-if (23 === "23"){
+if (23 === '23'){
     console.log('Something to print...')
 }
