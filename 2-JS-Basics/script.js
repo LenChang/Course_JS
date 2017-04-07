@@ -135,7 +135,7 @@ switch (job){
 
 //////////////////////////////////////////////
 // CODING CHALLENGE 1
-
+/*
 var age_John = age_JohnFriend = 26;
 var height_John = height_JohnFriend = 178;
 
@@ -149,3 +149,33 @@ if (score_John > score_JohnFriend){
 }else{
     console.log('DRAW!')
 }
+*/
+
+///////////////////////////////////////////////
+// Lecture: Functions
+
+function calculateAge(yearOfBirth){
+    var age = 2016 - yearOfBirth;
+    return age;
+}
+
+var ageJohn = calculateAge(1990);
+var ageLen = calculateAge(1986);
+var ageMary = calculateAge(1948);
+console.log(ageJohn);
+
+function yearsUntilRetirement(name, yearOfBirth){
+    var age = calculateAge(yearOfBirth)
+    var retirement = 65 - age;
+
+    if(retirement >= 0){
+        console.log(name + 'retires in ' + retirement + ' years.');
+    }else{
+        console.log(name + ' is already retired.')
+    }    
+}
+
+
+yearsUntilRetirement('John', 1990);
+yearsUntilRetirement('Len', 1986);
+yearsUntilRetirement('Mary', 1948);
