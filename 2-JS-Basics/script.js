@@ -1,3 +1,4 @@
+//////////////////////////////////////////
 // Lecture: variables
 /*
 var name = 'John';
@@ -42,6 +43,7 @@ console.log(lastName);
 alert('The lastName is ' + lastName);
 */
 
+/////////////////////////////////////////////////////////////////
 // Lecture: operators
 /*
 var now = 2016;
@@ -66,6 +68,7 @@ ageMark *= 2;
 console.log('ageMark*=2 is ' + ageMark);
 */
 
+///////////////////////////////////////////////////////////////////
 // Lecture: if/else statements
 /*
 var name = 'Len Chang';
@@ -100,6 +103,7 @@ if (23 === '23'){
 }
 */
 
+////////////////////////////////////////////////////////////
 // lecture: boolean logic and switch
 /*
 var age = 16;
