@@ -100,8 +100,8 @@ if (23 === '23'){
 }
 */
 
-// ecture: boolean logic and switch
-
+// lecture: boolean logic and switch
+/*
 var age = 16;
 
 if(age <= 20){
@@ -130,4 +130,22 @@ switch (job){
         break;
     default:
         console.log('John does something else');
+}
+*/
+
+//////////////////////////////////////////////
+// CODING CHALLENGE 1
+
+var age_John = age_JohnFriend = 26;
+var height_John = height_JohnFriend = 178;
+
+var score_John = age_John + height_John * 5;
+var score_JohnFriend = age_JohnFriend + height_John * 5;
+
+if (score_John > score_JohnFriend){
+    console.log('John win!!');
+}else if(score_John < score_JohnFriend){
+    console.log("John's friend win!!")
+}else{
+    console.log('DRAW!')
 }
