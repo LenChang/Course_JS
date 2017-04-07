@@ -153,7 +153,7 @@ if (score_John > score_JohnFriend){
 
 ///////////////////////////////////////////////
 // Lecture: Functions
-
+/*
 function calculateAge(yearOfBirth){
     var age = 2016 - yearOfBirth;
     return age;
@@ -175,7 +175,27 @@ function yearsUntilRetirement(name, yearOfBirth){
     }    
 }
 
-
 yearsUntilRetirement('John', 1990);
 yearsUntilRetirement('Len', 1986);
 yearsUntilRetirement('Mary', 1948);
+*/
+
+/////////////////////////////////////////////////////
+// Lecture: Statements and expressions
+
+function someFun(par){
+    //code
+}
+
+var someFun = function(par){
+    //code
+}
+
+//Expressions
+3 + 4;
+var x = 3;
+
+//statements
+if (x===5){
+    //do something
+}
