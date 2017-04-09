@@ -310,13 +310,13 @@ console.log(john.age);
 
 /////////////////////////////////////////////////
 // Lecture: Loops
-
+/*
 for (var i = 0; i < 10; i++){
     console.log(i);
 }
 
 var names = ['John', 'Jane', 'Mary', 'Mark', 'Bob'];
-/*
+
 // for loops
 for(var i = 0; i < names.length; i++){
     console.log(names[i]);
@@ -325,7 +325,7 @@ for(var i = 0; i < names.length; i++){
 for(var i = names.length - 1; i >= 0 ; i--){
     console.log(names[i]);
 }
-*/
+
 // while loops
 var i = 0;
 while(i < names.length){
@@ -348,3 +348,34 @@ for (var i = 1; i <=5; i++){
 
     console.log(i);
 }
+*/
+
+/////////////////////////////////////////////////////////////////////
+// CHALLENGE 2
+
+var years = [2010, 2008, 1948, 1990];
+
+function printFullAge(years) {
+
+    var ages = [];
+
+    for (var i = 0; i < years.length; i++) {
+        ages[i] = 2017 - years[i];
+    }
+
+    var output = [];
+    for (var i = 0; i < ages.length; i++) {
+        if (ages >= 18) {
+            output[i] = true;
+        } else {
+            output[i] = false;
+        }
+    }
+    return output;
+}
+
+var full_1 = printFullAge(years);
+var full_2 = printFullAge([2012, 1915]);
+
+console.log(full_1);
+console.log(full_2); 
