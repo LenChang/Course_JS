@@ -233,7 +233,7 @@ if(john.indexOf('teacher') === -1){
 
 /////////////////////////////////////////////////
 // Lecture: Objects. It's a key-value format
-
+/*
 var john = {
     name: 'John',
     lastName: 'Smith',
@@ -261,4 +261,48 @@ jane['job'] = 'retired';
 jane['isMarried'] = true;
 
 console.log(jane);
+*/
 
+///////////////////////////////////////////
+// Lecture: Objects and methods
+/*
+var john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family:['Jane', 'Mark', 'Bob'],
+    calculateAge: function(){
+        return 2016 - this.yearOfBirth;
+    }
+};
+
+console.log(john.calculateAge());
+
+var age = john.calculateAge();
+john.age = age;
+
+console.log(john);
+*/
+//v2.0
+var john = {
+    name: 'John',
+    lastName: 'Smith',
+    yearOfBirth: 1990,
+    job: 'teacher',
+    isMarried: false,
+    family:['Jane', 'Mark', 'Bob'],
+    calculateAge: function(){
+        //return 2016 - this.yearOfBirth;
+        this.age = 2016 - this.yearOfBirth;
+    }
+};
+
+console.log(john.age);
+john.calculateAge();
+console.log(john.age);
+john.yearOfBirth = 1980;
+// Don't forget to call method to change value
+john.calculateAge();
+console.log(john.age);
