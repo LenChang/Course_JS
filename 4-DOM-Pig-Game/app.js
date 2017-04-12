@@ -14,13 +14,38 @@ var score, roundScore, activePlayer, dice;
 score = [0, 0];
 roundScore = 0;
 activePlayer = 1;
-dice = Math.floor(Math.random() * 6) + 1;
-
-//console.log(dice);
-document.querySelector('#current-' + activePlayer).textContent = dice;
-// document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>';
-
-var x = document.querySelector('#score-' + activePlayer).textContent;
-console.log(x);
 
 document.querySelector('.dice').style.display = 'none';
+
+// It's a bit faster than querySelector('#score-..')
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+
+/*-- Callback function menas that it's called by another function. --*/
+// function btn(){
+//     //DO something here
+// }
+// // btn() will pass to another func. as an argument.
+// document.querySelector('.btn-roll').addEventListener('click', btn);
+
+// anonymous function
+document.querySelector('.btn-roll').addEventListener('click', function () {
+    // 1. Random number
+    var dice = Math.floor(Math.random() * 6) + 1;
+
+    // 2. Display the result
+    var diceDom = document.querySelector('.dice');
+    diceDom.style.display = 'block';
+    diceDom.src = 'dice-' + dice + '.png';
+
+    // 3. Update the round
+    if (dice === 1) {
+        roundScore = 0;
+    } else {
+        roundScore += dice;
+    }
+    document.getElementById('current-0').textContent = roundScore;
+
+});
