@@ -13,7 +13,7 @@ var score, roundScore, activePlayer, dice;
 
 score = [0, 0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 document.querySelector('.dice').style.display = 'none';
 
@@ -42,10 +42,52 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
     // 3. Update the round
     if (dice === 1) {
-        roundScore = 0;
+        nextPlayer();
     } else {
         roundScore += dice;
+        document.getElementById('current-' + activePlayer).textContent = roundScore;
     }
-    document.getElementById('current-0').textContent = roundScore;
 
 });
+
+document.querySelector('.btn-hold').addEventListener('click', function () {
+    score[activePlayer] += roundScore;
+    document.getElementById('score-' + activePlayer).textContent = score[activePlayer];
+
+    // if player won the game.
+    if (score[activePlayer] >= 10) {
+        document.getElementById('name-' + activePlayer).textContent = "Winner";
+        document.querySelector('.dice').style.display = 'none';
+        document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+        document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+        
+    } else {
+        // Turn to next player
+        nextPlayer();
+    }
+});
+
+function nextPlayer() {
+    // Return roundScore to zero and turn to next player
+    roundScore = 0;
+
+    // document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+    document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+
+    //--- ternary operator ---//
+    // As same as listed below.
+    // if(activePlayer === 0){
+    //     activePlayer === 1;
+    // }else{
+    //     activePlayer === 0;
+    // }
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+
+    // document.querySelector('.player-' + activePlayer + '-panel').classList.add('active');
+    document.querySelector('.player-' + activePlayer + '-panel').classList.toggle('active');
+
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    document.querySelector('.dice').style.display = 'none';
+}
