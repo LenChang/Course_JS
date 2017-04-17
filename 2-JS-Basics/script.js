@@ -352,7 +352,7 @@ for (var i = 1; i <=5; i++){
 
 /////////////////////////////////////////////////////////////////////
 // CHALLENGE 2
-
+/*
 var years = [2010, 2008, 1948, 1990];
 
 function printFullAge(years) {
@@ -379,3 +379,25 @@ var full_2 = printFullAge([2012, 1915]);
 
 console.log(full_1);
 console.log(full_2); 
+*/
+
+/////////////////////////////////////////////////
+// Recurisive
+// 0, 1, 2, 3, 5, 8, ...
+
+var temp = function fun_Factorial(n) {
+
+    if (n === 0) {
+        return 0;
+    } else if (n === 1) {
+        return 1;
+    }
+    else {
+        return (fun_Factorial(n - 1) + fun_Factorial(n - 2));
+    }
+};
+typeof fun_Factorial === 'undefined'
+
+for (var i = 0; i <= 10; i++) {
+    console.log(temp(i));
+}
